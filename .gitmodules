@@ -1,0 +1,3 @@
+[submodule "silkTools"]
+	path = silkTools
+	url = git@github.com:funnsam/silkTools
