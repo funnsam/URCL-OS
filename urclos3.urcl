@@ -123,8 +123,8 @@ DW 0 //configured on startup (/bin/sh)
 .OSVar_ECHO
 DW 1
 .OSVar_MEMLIMIT
-//DW @HEAP
-DW @MINHEAP //use this on bad emu that no have @HEAP (I am looking at you bram)
+DW @HEAP
+//DW @MINHEAP //use this on bad emu that no have @HEAP (I am looking at you bram)
 .OSVar_BITS
 DW @BITS
 .OSVar_MEM0
