@@ -49,7 +49,6 @@ DW [ ._29 ]
 DW [ ._30 ]
 DW [ ._31 ]
 DW [ ._66 ]
-nop
 ._41
 DW [ ._68 ]
 DW [ ._18 ]
@@ -89,74 +88,51 @@ DW [ ._81 ]
 DW [ ._25 ]
 DW [ ._82 ]
 DW [ ._26 ]
-nop
 ._0
 DW [ 0 ]
-nop
 ._1
 DW [ 0 ]
-nop
 ._42
 DW [ 0 ]
-nop
 ._43
 DW [ 0 ]
-nop
 ._2
 DW [ 1 ]
-nop
 ._44
 DW [ @HEAP ]
-nop
 ._45
 DW [ @BITS ]
-nop
 ._46
 DW [ m0 ]
-nop
 ._3
 DW [ m0 ]
-nop
 ._47
 DW [ @MAX ]
-nop
 ._4
 DW [ 0 ]
-nop
 ._48
 DW [ 0 ]
-nop
 ._49
 DW [ 0 ]
-nop
 ._50
 DW [ 0 ]
-nop
 ._5
 DW [ 0 ]
-nop
 ._6
 DW [ 0 ]
-nop
 ._51
 DW [ 10 "halting..." 10 0 ]
-nop
 ._52
 DW [ ._54 ]
-nop
 ._53
 DW [ 1 ]
-nop
 ._7
 DW [ 0 ]
-nop
 ._8
 DW [ 0 ]
-nop
 ._9
 DW [ 0 ]
 DW [ 0 ]
-nop
 ._54
 DW [ 0 ]
 DW [ 0 ]
