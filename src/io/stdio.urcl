@@ -44,12 +44,14 @@ LOD R6 !VirtualRegister
 POP R3
 BRZ .Scal_Gets_End R2
 LOD R7 !OSVar_ECHO
+MOV R8 R2
 .Scal_Gets_Loop
 IN R1 %TEXT
 BRE .Scal_Gets_End R1 R6
-BRE .Scal_Gets_Del R1 127
 BRE .Scal_Gets_Escape R1 0x1b
 BRZ .Scal_Gets_EchoSkip R7
+BRE .Scal_Gets_Backspace R1 127
+BRE .Scal_Gets_Backspace R1 8
 OUT %TEXT R1
 .Scal_Gets_EchoSkip
 STR R3 R1
@@ -61,17 +63,14 @@ BNZ .Scal_Gets_Loop R2
 STR R3 R0
 RET
 
-.Scal_Gets_Del
-BRE .Scal_Gets_DelNone R2 R3
+.Scal_Gets_Backspace
+BRE .Scal_Gets_DelNone R8 R2
+BRZ .Scal_Gets_DelSkip R7
 DEC R3 R3
 INC R2 R2
-OUT %TEXT 0x1b
-OUT %TEXT '['
-OUT %TEXT '1'
-OUT %TEXT 'D'
-OUT %TEXT 0x1b
-OUT %TEXT '['
-OUT %TEXT 'K'
+OUT %TEXT 0x08 // \b
+OUT %TEXT 0x20 // whitespace
+OUT %TEXT 0x08 // \b
 JMP .Scal_Gets_DelSkip
 
 .Scal_Gets_DelNone
@@ -99,3 +98,10 @@ INC R1 R1
 JMP .PrintString
 .PrintString_Exit
 RET
+
+!ContextSwitch_Restartprocloop
+.ContextSwitch_Restartprocloop
+IMM R5 !ProcessDescriptors
+LOD R7 R5
+BRZ !END R7
+JMP !ContextSwitch_Restartprocloop_Return

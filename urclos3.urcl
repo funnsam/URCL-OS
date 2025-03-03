@@ -2,20 +2,20 @@ BITS 16
 MINREG 10
 MINHEAP 4096
 MINSTACK 16
-._36
+._41
 OUT %ADDR 7
 IN r4 %BUS
-BRZ ._39 r4
+BRZ ._44 r4
 STR ._5 r4
 STR ._3 m0
-._37
+._42
 SUB r5 @MINHEAP 2
-BGE ._38 r5 @SMAX
+BGE ._43 r5 @SMAX
 STR m0 r5
 DEC r5 @MINHEAP
 LSTR m0 r5 -1
-JMP ._11
-._38
+JMP ._15
+._43
 DEC r5 @SMAX
 STR m0 r5
 SUB r5 @MINHEAP @MSB
@@ -24,281 +24,277 @@ DEC r6 @MSB
 LSTR m0 r6 r5
 DEC r5 @MINHEAP
 LSTR m0 r5 -1
-JMP ._11
-._39
+JMP ._15
+._44
 OUT %TEXT 'E'
 OUT %TEXT 'r'
 OUT %TEXT 'r'
 OUT %TEXT 'o'
 OUT %TEXT 'r'
 RET
-._40
-DW [ ._10 ]
-DW [ ._55 ]
-DW [ ._56 ]
-DW [ ._57 ]
-DW [ ._58 ]
-DW [ ._59 ]
-DW [ ._60 ]
-DW [ ._61 ]
-DW [ ._62 ]
-DW [ ._64 ]
-DW [ ._27 ]
-DW [ ._28 ]
-DW [ ._29 ]
-DW [ ._30 ]
-DW [ ._31 ]
-DW [ ._66 ]
-._41
-DW [ ._68 ]
-DW [ ._18 ]
-DW [ ._19 ]
-DW [ ._20 ]
-DW [ ._21 ]
-DW [ ._22 ]
-DW [ ._23 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._69 ]
-DW [ ._70 ]
-DW [ ._74 ]
-DW [ ._75 ]
-DW [ ._86 ]
-DW [ ._77 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._24 ]
-DW [ ._32 ]
-DW [ ._33 ]
-DW [ ._35 ]
-DW [ ._12 ]
-DW [ ._13 ]
-DW [ ._14 ]
-DW [ ._15 ]
-DW [ ._16 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._86 ]
-DW [ ._78 ]
-DW [ ._80 ]
-DW [ ._81 ]
-DW [ ._25 ]
-DW [ ._82 ]
-DW [ ._26 ]
-._0
-DW [ 0 ]
-._1
-DW [ 0 ]
-._42
-DW [ 0 ]
-._43
-DW [ 0 ]
-._2
-DW [ 1 ]
-._44
-DW [ @HEAP ]
 ._45
-DW [ @BITS ]
+DW ._11
+DW ._59
+DW ._60
+DW ._61
+DW ._62
+DW ._63
+DW ._64
+DW ._65
+DW ._66
+DW ._68
+DW ._32
+DW ._33
+DW ._34
+DW ._35
+DW ._36
+DW ._70
 ._46
-DW [ m0 ]
-._3
-DW [ m0 ]
+DW ._72
+DW ._23
+DW ._24
+DW ._25
+DW ._26
+DW ._27
+DW ._28
+DW ._90
+DW ._90
+DW ._90
+DW ._73
+DW ._74
+DW ._78
+DW ._79
+DW ._90
+DW ._81
+DW ._90
+DW ._90
+DW ._29
+DW ._37
+DW ._38
+DW ._40
+DW ._16
+DW ._17
+DW ._18
+DW ._19
+DW ._20
+DW ._90
+DW ._90
+DW ._90
+DW ._90
+DW ._90
+DW ._82
+DW ._84
+DW ._85
+DW ._30
+DW ._86
+DW ._31
+._0
+DW 0
+._1
+DW 0
 ._47
-DW [ @MAX ]
-._4
-DW [ 0 ]
+DW 0
 ._48
-DW [ 0 ]
+DW 0
+._2
+DW 1
 ._49
-DW [ 0 ]
+DW @HEAP
 ._50
-DW [ 0 ]
-._5
-DW [ 0 ]
-._6
-DW [ 0 ]
+DW @BITS
 ._51
-DW [ 10 "halting..." 10 0 ]
+DW m0
+._3
+DW m0
 ._52
-DW [ ._54 ]
+DW @MAX
+._4
+DW 0
 ._53
-DW [ 1 ]
-._7
-DW [ 0 ]
-._8
-DW [ 0 ]
-._9
-DW [ 0 ]
-DW [ 0 ]
+DW 0
 ._54
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-NOP
-._10
-RET
+DW 0
 ._55
+DW 0
+._5
+DW 0
+._6
+DW 0
+._56
+DW [ 10 "halting..." 10 0 ]
+._57
+DW ._10
+._58
+DW 1
+._7
+DW 0
+._8
+DW 0
+._9
+DW 0
+DW 0
+._10
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+NOP
+._11
+RET
+._59
 INC r4 r4
 OUT %ADDR r4
 IN r6 %BUS
 LSTR r3 r9 r6
 RET
-._56
+._60
 LLOD r2 r2 r9
 LLOD r1 r1 r9
 ADD r1 r2 r1
 LSTR r3 r9 r1
 RET
-._57
+._61
 LLOD r2 r2 r9
 LLOD r1 r1 r9
 SUB r1 r2 r1
 LSTR r3 r9 r1
 RET
-._58
+._62
 LLOD r2 r2 r9
 LLOD r1 r1 r9
 AND r1 r1 r2
 LSTR r3 r9 r1
 RET
-._59
+._63
 LLOD r2 r2 r9
 LLOD r1 r1 r9
 NOR r1 r1 r2
 LSTR r3 r9 r1
 RET
-._60
+._64
 LLOD r2 r2 r9
 LLOD r1 r1 r9
 BSL r1 r2 r1
 LSTR r3 r9 r1
 RET
-._61
+._65
 LLOD r2 r2 r9
 LLOD r1 r1 r9
 BSR r1 r2 r1
 LSTR r3 r9 r1
 RET
-._62
-LLOD r2 r2 r9
-LLOD r1 r1 r9
-BRL ._63 r2 r1
-LLOD r3 r3 r9
-LOD r6 r5
-LLOD r6 r6 1
-ADD r4 r6 r3
-DEC r4 r4
-._63
-RET
-._64
-LLOD r2 r2 r9
-LLOD r1 r1 r9
-BNE ._65 r2 r1
-LLOD r3 r3 r9
-LOD r6 r5
-LLOD r6 r6 1
-ADD r4 r6 r3
-DEC r4 r4
-._65
-RET
 ._66
-BSL r2 r2 4
-OR r1 r1 r2
-BRG ._67 r1 37
-LLOD r1 r1 ._41
-CAL r1
-RET
+LLOD r2 r2 r9
+LLOD r1 r1 r9
+BRL ._67 r2 r1
+LLOD r3 r3 r9
+LOD r6 r5
+LLOD r6 r6 1
+ADD r4 r6 r3
+DEC r4 r4
 ._67
-STR ._6 6
 RET
 ._68
+LLOD r2 r2 r9
+LLOD r1 r1 r9
+BNE ._69 r2 r1
+LLOD r3 r3 r9
+LOD r6 r5
+LLOD r6 r6 1
+ADD r4 r6 r3
+DEC r4 r4
+._69
+RET
+._70
+BSL r2 r2 4
+OR r1 r1 r2
+BRG ._71 r1 37
+LLOD r1 r1 ._46
+CAL r1
+RET
+._71
+STR ._6 6
+RET
+._72
 LLOD r3 r3 r9
 PSH r3
 LOD r3 r5
 DEC r3 r3
-CAL ._34
+CAL ._39
 LOD r3 r5
 LLOD r3 r3 5
 BRZ ~+2 r3
-CAL ._34
+CAL ._39
 POP r3
-STR ._50 r3
+STR ._55 r3
 DEC r5 r5
 LOD r1 r5
 INC r5 r5
-BRZ ._87 r1
-LOD r1 ._52
+BRZ ._12 r1
+LOD r1 ._57
 DEC r1 r1
-STR ._52 r1
+STR ._57 r1
 INC r1 r1
 LOD r2 r1
 STR r5 r2
 STR r1 0
-CAL ._88
+CAL ._13
 RET
-._69
+._73
 LLOD r4 r3 r9
 LOD r1 r5
 LSTR r1 1 r4
 DEC r4 r4
 RET
-._70
+._74
 PSH r3
-LOD r6 ._53
+LOD r6 ._58
 LSTR r3 r9 r6
 INC r6 r6
-STR ._53 r6
+STR ._58 r6
 SUB r3 ._9 r9
 STR ._9 23
-CAL ._32
+CAL ._37
 LOD r3 ._9
-LOD r7 ._52
+LOD r7 ._57
 INC r7 r7
-STR ._52 r7
+STR ._57 r7
 STR r7 r3
-LOD r6 ._53
+LOD r6 ._58
 DEC r6 r6
 STR r3 r6
-INC r3 r3
 LOD r1 r5
-INC r1 r1
-CPY r3 r1
-INC r3 r3
-STR r3 r0
-INC r3 r3
-STR r3 r4
-INC r3 r3
-ADD r1 r1 3
-CPY r3 r1
-INC r1 r1
-INC r3 r3
+LLOD r6 r1 1
+LSTR r3 1 r6
+LSTR r3 2 r0
+LSTR r3 3 r4
+LLOD r6 r1 4
+LSTR r3 4 r1
+ADD r1 r1 5
+ADD r3 r3 5
 LOD r6 r1
 PSH r6
 STR r3 r0
 PSH r0
-BRZ ._72 r6
+BRZ ._76 r6
 PSH r3
 PSH r1
 PSH r6
 SUB r3 ._9 r9
 STR ._9 64
-CAL ._32
+CAL ._37
 LOD r2 ._9
 POP r6
 POP r1
@@ -308,26 +304,26 @@ POP r0
 PSH r2
 STR r3 r2
 IMM r8 64
-._71
+._75
 INC r2 r2
 INC r6 r6
 CPY r2 r6
 DEC r8 r8
-BNZ ._71 r8
-._72
+BNZ ._75 r8
+._76
 INC r1 r1
 INC r3 r3
 CPY r3 r1
 INC r3 r3
 MOV r2 r0
 MOV r1 r9
-._73
+._77
 LOD r8 r1
 STR r3 r8
 INC r3 r3
 INC r1 r1
 INC r2 r2
-BRL ._73 r2 16
+BRL ._77 r2 16
 POP r2
 POP r6
 DEC r3 r3
@@ -338,100 +334,100 @@ POP r1
 SUB r3 r3 15
 LSTR r3 r1 r0
 RET
-._74
+._78
 ADD r3 r3 r9
 LOD r1 r5
 CPY r3 r1
 RET
-._75
+._79
 LLOD r3 r3 r9
-IMM r2 ._54
-._76
+IMM r2 ._10
+._80
 LOD r1 r2
-BRZ ._10 r1
+BRZ ._11 r1
 LOD r1 r1
 INC r2 r2
-BNE ._76 r1 r3
+BNE ._80 r1 r3
 DEC r4 r4
-CAL ._88
+CAL ._13
 RET
-._77
+._81
 LLOD r3 r3 r9
 STR ._0 r3
 RET
-._78
+._82
 ADD r8 r3 r9
 LOD r3 r8
 IMM r1 -1
-._79
+._83
 LOD r7 r3
 INC r3 r3
 INC r1 r1
-BNZ ._79 r7
+BNZ ._83 r7
 STR r8 r1
 RET
-._80
+._84
 LLOD r3 ._0 r3
 STR ._9 r3
 SUB r3 ._9 r9
-CAL ._29
+CAL ._34
 RET
-._81
+._85
 MOV r1 r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r3 ._9
 LSTR ._0 r1 r3
 RET
-._82
+._86
 ADD r3 r3 r9
 PSH r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r2 ._9
 SUB r3 ._9 r9
 PSH r2
-CAL ._30
+CAL ._35
 POP r2
 LOD r7 ._9
 POP r3
 LOD r1 r3
-BRZ ._84 r7
-._83
+BRZ ._88 r7
+._87
 LOD r6 r1
 INC r1 r1
-BRZ ._85 r6
-BNE ._83 r6 r7
+BRZ ._89 r6
+BNE ._87 r6 r7
 DEC r2 r2
-BNZ ._83 r2
-._84
+BNZ ._87 r2
+._88
 STR r3 r1
 RET
-._85
-BRZ ._84 r7
+._89
+BRZ ._88 r7
 STR ._6 9
 RET
-._86
+._90
 STR ._6 6
 RET
-._87
-IMM r1 ._51
-CAL ._17
+._12
+IMM r1 ._56
+CAL ._21
 HLT
-._88
+._13
 MOV r10 r0
 LOD r7 r5
-BRZ ._89 r7
+BRZ ._91 r7
 LSTR r7 3 r4
 LOD r8 ._4
 LSTR r7 4 r8
 LOD r8 ._6
 LSTR r7 6 r8
-._89
+._91
 INC r5 r5
 LOD r7 r5
-BRE ._91 r7 0
-._90
+BRE ._22 r7 0
+._14
 LLOD r4 r7 3
 LLOD r8 r7 4
 STR ._4 r8
@@ -439,17 +435,12 @@ LLOD r8 r7 6
 STR ._6 r8
 ADD r9 r7 7
 RET
-._91
-IMM r5 ._54
-LOD r7 r5
-BRZ ._87 r7
-JMP ._90
-._11
+._15
 SUB r3 ._9 r9
 STR ._9 23
-CAL ._32
+CAL ._37
 LOD r3 ._9
-STR ._54 r3
+STR ._10 r3
 STR r3 r0
 LSTR r3 1 r4
 OUT %ADDR 6
@@ -461,7 +452,7 @@ LSTR r3 4 r0
 LSTR r3 5 r0
 LSTR r3 6 r0
 ADD r9 r3 7
-IMM r5 ._54
+IMM r5 ._10
 MOV r10 r0
 ._92
 OUT %ADDR r4
@@ -472,7 +463,7 @@ BSR r1 r6 4
 AND r2 r2 15
 AND r1 r1 15
 AND r6 r6 15
-ADD r6 r6 ._40
+ADD r6 r6 ._45
 LOD r6 r6
 CAL r6
 INC r4 r4
@@ -480,40 +471,42 @@ INC r10 r10
 STR r9 r0
 BLE ._92 r10 255
 DEC r4 r4
-CAL ._88
+CAL ._13
 JMP ._92
-._12
+._16
 LLOD r1 r3 r9
-CAL ._17
+CAL ._21
 RET
-._13
+._17
 LLOD r3 r3 r9
 OUT %TEXT r3
 RET
-._14
+._18
 INC r4 r4
 OUT %ADDR r4
 IN r3 %BUS
 OUT %TEXT r3
 RET
-._15
+._19
 LLOD r3 r3 r9
 PSH r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r2 ._9
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r6 ._9
 POP r3
 BRZ ._96 r2
 LOD r7 ._2
+MOV r8 r2
 ._93
 IN r1 %TEXT
 BRE ._96 r1 r6
-BRE ._97 r1 127
 BRE ._99 r1 27
 BRZ ._94 r7
+BRE ._97 r1 127
+BRE ._97 r1 8
 OUT %TEXT r1
 ._94
 STR r3 r1
@@ -525,16 +518,13 @@ BNZ ._93 r2
 STR r3 r0
 RET
 ._97
-BRE ._98 r2 r3
+BRE ._98 r8 r2
+BRZ ._95 r7
 DEC r3 r3
 INC r2 r2
-OUT %TEXT 27
-OUT %TEXT '['
-OUT %TEXT '1'
-OUT %TEXT 'D'
-OUT %TEXT 27
-OUT %TEXT '['
-OUT %TEXT 'K'
+OUT %TEXT 8
+OUT %TEXT 32
+OUT %TEXT 8
 JMP ._95
 ._98
 OUT %TEXT 7
@@ -544,38 +534,43 @@ IN r0 %TEXT
 IN r0 %TEXT
 OUT %TEXT 7
 JMP ._95
-._16
+._20
 IN r1 %TEXT
 LSTR r3 r9 r1
 RET
-._17
+._21
 LOD r2 r1
 BRZ ._100 r2
 OUT %TEXT r2
 INC r1 r1
-JMP ._17
+JMP ._21
 ._100
 RET
+._22
+IMM r5 ._10
+LOD r7 r5
+BRZ ._12 r7
+JMP ._14
 ._101
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ 0 ]
-DW [ -1 ]
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW 0
+DW -1
 NOP
-._18
+._23
 LLOD r3 r3 r9
 IMM r1 -2
 PSH r3
@@ -707,7 +702,7 @@ INC r8 r8
 OUT %ADDR r8
 OUT %BUS 0
 RET
-._19
+._24
 PSH r4
 PSH r3
 ADD r3 r3 r9
@@ -726,7 +721,7 @@ LSTR r3 r9 r2
 SUB r3 ._9 r9
 STR ._9 4
 PSH r1
-CAL ._32
+CAL ._37
 POP r1
 LOD r4 ._9
 STR r1 r4
@@ -753,7 +748,7 @@ RET
 ._109
 STR ._6 12
 RET
-._20
+._25
 LLOD r3 r3 r9
 ADD r3 r3 ._101
 LOD r1 r3
@@ -768,20 +763,20 @@ RET
 ._110
 STR ._6 7
 RET
-._21
+._26
 LLOD r3 r3 r9
 PSH r3
 ADD r3 r3 ._101
 LOD r1 r3
 SUB r3 ._9 r9
 PSH r1
-CAL ._30
+CAL ._35
 POP r1
 LOD r7 ._9
 SUB r3 ._9 r9
 PSH r1
 PSH r7
-CAL ._30
+CAL ._35
 POP r7
 POP r1
 LOD r6 ._9
@@ -813,7 +808,7 @@ BNE ._115 r3 r6
 LOD r3 ._7
 STR ._9 r3
 SUB r3 ._9 r9
-CAL ._29
+CAL ._34
 RET
 ._114
 STR r7 0
@@ -847,20 +842,20 @@ ADD r3 r3 r8
 DEC r3 r3
 LSTR r1 2 r3
 JMP ._111
-._22
+._27
 PSH r4
 LLOD r3 r3 r9
 ADD r3 r3 ._101
 LOD r1 r3
 SUB r3 ._9 r9
 PSH r1
-CAL ._30
+CAL ._35
 POP r1
 LOD r2 ._9
 SUB r3 ._9 r9
 PSH r1
 PSH r2
-CAL ._30
+CAL ._35
 POP r2
 POP r1
 LOD r3 ._9
@@ -1021,10 +1016,10 @@ JMP ._116
 ._124
 POP r4
 RET
-._23
+._28
 PSH r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r1 ._9
 ADD r1 r1 ._101
 LOD r1 r1
@@ -1072,12 +1067,12 @@ RET
 POP r0
 STR ._6 14
 RET
-._24
+._29
 STR ._8 r4
 ADD r3 r3 r9
 PSH r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r6 ._9
 BNE ~+2 r6 65535
 LOD r6 ._0
@@ -1213,16 +1208,16 @@ POP r0
 POP r0
 LOD r4 ._8
 RET
-._25
+._30
 PSH r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r2 ._9
 DEC r2 r2
 POP r3
 ADD r3 r3 r9
 LOD r3 r3
-BRZ ._10 r2
+BRZ ._11 r2
 LOD r1 ._0
 ADD r6 r1 3
 OUT %ADDR r6
@@ -1235,10 +1230,10 @@ INC r3 r3
 STR r3 0
 DEC r2 r2
 BSR r1 r1 8
-BRZ ._10 r1
+BRZ ._11 r1
 SUB r6 r6 r1
 ._140
-BRZ ._10 r2
+BRZ ._11 r2
 OUT %ADDR r6
 IN r8 %BUS
 STR r3 r8
@@ -1247,12 +1242,12 @@ DEC r1 r1
 INC r6 r6
 INC r3 r3
 STR r3 0
-BRZ ._10 r1
-BRZ ._10 r2
+BRZ ._11 r1
+BRZ ._11 r2
 JMP ._140
 ._141
 RET
-._26
+._31
 LLOD r3 r3 r9
 ADD r3 r3 ._101
 LOD r3 r3
@@ -1282,7 +1277,7 @@ JMP ._142
 ._143
 STR ._9 r8
 SUB r3 ._9 r9
-CAL ._29
+CAL ._34
 RET
 ._144
 IMM r4 0
@@ -1378,17 +1373,17 @@ OUT %BUS r6
 JMP ._148
 ._154
 HLT
-._27
+._32
 LLOD r2 r2 r9
 ADD r3 r3 r9
 CPY r3 r2
 RET
-._28
+._33
 LLOD r3 r3 r9
 ADD r2 r2 r9
 CPY r3 r2
 RET
-._29
+._34
 LLOD r3 r3 r9
 LOD r6 r5
 LLOD r7 r6 5
@@ -1407,7 +1402,7 @@ STR ._9 64
 PSH r3
 SUB r3 ._9 r9
 PSH r6
-CAL ._32
+CAL ._37
 POP r6
 POP r3
 LOD r7 ._9
@@ -1421,7 +1416,7 @@ RET
 ._158
 STR ._6 11
 RET
-._30
+._35
 LOD r6 r5
 LLOD r6 r6 5
 BRZ ._158 r6
@@ -1434,7 +1429,7 @@ CPY r3 r8
 DEC r8 r8
 LSTR r9 15 r8
 RET
-._31
+._36
 LLOD r3 r3 r9
 ._159
 INC r4 r4
@@ -1444,7 +1439,7 @@ STR r3 r6
 INC r3 r3
 BNZ ._159 r6
 RET
-._32
+._37
 ADD r3 r3 r9
 PSH r3
 LOD r3 r3
@@ -1510,21 +1505,21 @@ STR ._6 3
 POP r0
 POP r0
 RET
-._33
+._38
 LLOD r3 r3 r9
 DEC r3 r3
-._34
+._39
 LOD r1 r3
 AND r1 r1 @SMAX
 STR r3 r1
 RET
-._35
+._40
 ADD r3 r3 r9
 PSH r3
 LOD r3 r3
 PSH r3
 SUB r3 ._9 r9
-CAL ._30
+CAL ._35
 LOD r6 ._9
 POP r3
 DEC r6 r6
@@ -1568,7 +1563,7 @@ PSH r6
 PSH r2
 STR ._9 r3
 SUB r3 ._9 r9
-CAL ._32
+CAL ._37
 LOD r7 ._9
 POP r2
 POP r6
